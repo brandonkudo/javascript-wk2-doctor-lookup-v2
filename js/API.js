@@ -1,22 +1,23 @@
 var apiKey = require('./../.env').apiKey;
 
 export class DoctorAPI {
-  constructor() {
-
+  constructor(input) {
+    this.input = input
   }
 
-  getDoctors(apiKey) {
+  getDoctors(input, apiKey) {
     $.ajax({
-      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=sick&location=45.5231,-122.6765,100&user_location=45.5231,-122.6765&skip=0&limit=10&user_key=fd8734588d4788a742859b150c18e848`,
+      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${input}&location=45.5231,-122.6765,100&user_location=45.5231,-122.6765&skip=0&limit=10&user_key=${apiKey}`,
       type: "GET".
       data: {
         format: 'json'
       },
       success: function(response) {
-        
+        let doctor = `${response.data.profile.first_name} ${response.data.profile.last_name}`;
+        showDoctor(doctor);
       },
       error: function() {
-        $('#errors').text("There was an error processing your request. Please try again.");
+        error();
       }
     })
   }
