@@ -23,9 +23,18 @@ $(document).ready(function() {
         $("#output").append(`${doctor}<br>`);
         for (var j = 0; j < response.data[i].practices.length; j++) {
           let practice = response.data[i].practices[j];
-          $("#output").append(`${practice.visit_address.street}<br>${practice.visit_address.city},`)
-          $("#output").append(`${practice.phones[0].number}`);
-
+          $("#output").append(`${practice.visit_address.street}<br>${practice.visit_address.city}, ${practice.visit_address.state}<br>`);
+          $("#output").append(`${practice.phones[0].number}<br>`);
+          if(practice.website === undefined) {
+            $("#output").append(`This doctor does not have a website<br>`);
+          } else {
+            $("#output").append(`${practice.website}<br>`);
+          }
+          if(practice.accepts_new_patients === true) {
+            $("#output").append(`Now accepting new patients<br>`);
+          } else {
+            $("#output").append(`Not accepting new patients<br>`);
+          }
         }
       }
       } else {
