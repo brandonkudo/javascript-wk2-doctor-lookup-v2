@@ -7,12 +7,26 @@
     <title>Doctor Lookup</title>
   </head>
   <body>
-    <form id="form">
-      <label for="ailment">Input your ailment to find doctors in your area.</label>
-      <input type="text" id="ailment">
-      <button type="button" id="ailment-button">Search</button>
-    </form>
-    <div id="output">      
+    <div class="container">
+
+      <div class="wrapper">
+        <div id="ailment-form">
+          <label for="ailment">Input your ailment to find doctors in your area.</label>
+          <input type="text" id="ailment">
+          <button type="button" id="ailment-button">Search</button>
+        </div>
+        <div id="name-form">
+          <label for="name">Search doctor's names in your area.</label>
+          <input type="text" id="name">
+          <button type="button" id="name-button">Search</button>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div id="output">
+        </div>
+      </div>
+
     </div>
   </body>
 </html>

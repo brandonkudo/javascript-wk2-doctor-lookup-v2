@@ -1,3 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Arimo");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+.name {
+  color: red;
+  font-size: 20px;
+  font-family: 'Arimo', sans-serif; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c9ebf2;
+  height: 100%; }
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 30vh;
+  background-color: #ef9628; }
+
+#name-form, #ailment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px; }
+
+.footer {
+  width: 100vw;
+  height: 100%;
+  background-color: #c9ebf2; }
+
+#output {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /*# sourceMappingURL=master.css.map */
