@@ -1,7 +1,5 @@
 var apiKey = require('./../.env').apiKey;
 
-
-
 $(document).ready(function() {
   // $("#output").hide();
   $("#ailment-button").click(function() {
