@@ -1,7 +1,7 @@
 import {Call} from "./../js/API.js";
 
 
-var displayData = function(response) {
+let displayData = function(response) {
   $("#output").show();
   if(response.data.length > 0) {
   for (var i = 0; i < response.data.length; i++) {
@@ -32,12 +32,11 @@ var displayData = function(response) {
   }
 }
 
-var error = function(error) {
+let error = function(error) {
   $("#output").text("Uh oh an error occurred");
 }
 
 $(document).ready(function() {
-  // $("#output").hide();
 
   var newCall = new Call();
   $("#ailment-button").click(function() {
